@@ -1,2 +1,16 @@
-<h1>Statics#contact</h1>
+<% content_for(:title, 'Contact Me') %>
+
+<h1>Contact</h1>
 <p>Find me in app/views/statics/contact.html.erb</p>
+
+<%= params.inspect  %>
+<p> ID: <%= params['id']  %></p>
+<p> PAGE: <%= params['pagina']  %></p>
+
+<br>
+
+<%= params.inspect  %>
+<p> ID: <%= @id  %></p>
+<p> PAGE: <%= @page  %></p>
+
+<br>

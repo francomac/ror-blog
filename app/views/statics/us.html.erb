@@ -1,2 +1,23 @@
-<h1>Statics#us</h1>
+<% provide(:title, 'Us') %>
+
+<h1>Us</h1>
 <p>Find me in app/views/statics/us.html.erb</p>
+<%= @mensaje %>
+<br>
+<%= "Este es el mensaje: #{@mensaje}" %>
+
+<br>
+
+<% if  @validador == true %>
+<h1>Validador es verdadero</h1>
+<% end %>
+
+<br>
+
+<ul>
+  <% @usuarios.each do |usr| %>
+    <%= "<li> #{usr} </li>".html_safe %>
+  <% end %>
+</ul>
+
+
