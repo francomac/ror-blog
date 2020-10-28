@@ -9,10 +9,18 @@ class ArticlesController < ApplicationController
 
   def new
     # form to create
+    @articulo = Articulo.new
   end
 
   def create
     # action for new record, executed by action 'new'
+    @articulo = Articulo.new(article_params)
+
+    if @articulo.save
+      redirect_to @articulo 
+    else
+      render action: "new"
+    end
   end
 
   def edit
@@ -25,6 +33,12 @@ class ArticlesController < ApplicationController
 
   def destroy
     # action to delete
+  end
+
+  private 
+  
+  def article_params
+    params.require(:articulo).permit(:titulo, :contenido)
   end
 
 end
