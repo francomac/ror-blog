@@ -15,7 +15,7 @@ class ArticlesController < ApplicationController
   def create
     # action for new record, executed by action 'new'
     @article = Article.new(article_params)
-    @article.author_id = 4; # TODO: assignation auto, no manually
+    @article.author_id = 1; # TODO: assignation auto, no manually
     if @article.save
       redirect_to action: 'show', id:@article.id
     else
@@ -38,7 +38,7 @@ class ArticlesController < ApplicationController
   private 
   
   def article_params
-    params.require(:articles).permit(:titulo, :contenido)
+    params[:article].permit(:titulo, :contenido)
   end
 
 end
