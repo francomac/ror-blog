@@ -1,0 +1,12 @@
+<h1>Autor#new</h1>
+<p>Find me in app/views/autor/new.html.erb</p>
+
+<%= form_for @autor, url: {action: "create"} do |f| %>
+<%= f.label :nombre %> <br>
+<%= f.text_field :nombre %> <br>
+
+<%= f.label :email %> <br>
+<%= f.text_field :email %> <br>
+
+<%= f.submit "Crear Autor" %>
+<% end %>

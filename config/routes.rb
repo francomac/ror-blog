@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  # get 'autor/show'
+  # get 'autor/new'
+  # get 'autor/create'
+  resources :autors
+
   # get 'articles/new'
   # get 'articles/index'
   resources :articles

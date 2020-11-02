@@ -9,15 +9,15 @@ class ArticlesController < ApplicationController
 
   def new
     # form to create
-    @articulo = Articulo.new
+    @article = Articulo.new
   end
 
   def create
     # action for new record, executed by action 'new'
-    @articulo = Articulo.new(article_params)
-
-    if @articulo.save
-      redirect_to @articulo 
+    @article = Articulo.new(article_params)
+    @article.autor_id = 4; # TODO: assignation auto, no manually
+    if @article.save
+      redirect_to action: 'show', id:@article.id
     else
       render action: "new"
     end
