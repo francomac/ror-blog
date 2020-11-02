@@ -15,21 +15,21 @@ ActiveRecord::Schema.define(version: 2020_10_23_032606) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "articulos", force: :cascade do |t|
+  create_table "articles", force: :cascade do |t|
     t.string "titulo"
     t.string "contenido"
-    t.bigint "autor_id", null: false
+    t.bigint "author_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["autor_id"], name: "index_articulos_on_autor_id"
+    t.index ["author_id"], name: "index_articles_on_author_id"
   end
 
-  create_table "autors", force: :cascade do |t|
+  create_table "authors", force: :cascade do |t|
     t.string "nombre"
-    t.string "email"
+    t.text "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "articulos", "autors"
+  add_foreign_key "articles", "authors"
 end

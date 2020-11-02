@@ -1,4 +1,4 @@
-class AutorsController < ApplicationController
+class AuthorsController < ApplicationController
   def index
   end
 
@@ -7,15 +7,15 @@ class AutorsController < ApplicationController
 
   def new
     # form to create
-    @autor = Autor.new
+    @author = Author.new
   end
 
   def create
     # action for new record, executed by action 'new'
-    @autor = Autor.new(autor_params)
+    @author = Author.new(author_params)
 
-    if @autor.save
-      redirect_to @autor 
+    if @author.save
+      redirect_to @author 
     else
       render action: "new"
     end
@@ -35,7 +35,7 @@ class AutorsController < ApplicationController
 
   private 
   
-  def autor_params
-    params[:autor].permit(:email, :nombre)
+  def author_params
+    params[:author].permit(:email, :nombre)
   end
 end

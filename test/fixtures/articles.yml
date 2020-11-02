@@ -3,9 +3,9 @@
 one:
   titulo: MyString
   contenido: MyString
-  autor: one
+  author: one
 
 two:
   titulo: MyString
   contenido: MyString
-  autor: two
+  author: two
