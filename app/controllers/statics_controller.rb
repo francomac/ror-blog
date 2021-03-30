@@ -8,7 +8,7 @@ class StaticsController < ApplicationController
   def us
     @validador = true
     @usuarios = ['Franco', 'Leo', 'Pepillo']
-    @mensaje = "Hola desde el controlles"
+    @mensaje = "Hola desde el controlle Statics"
   end
 
 end
