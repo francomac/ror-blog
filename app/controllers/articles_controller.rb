@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   def index
     #show a list of record
+    @articles = Article.all.order("created_at DESC")
   end
 
   def show
